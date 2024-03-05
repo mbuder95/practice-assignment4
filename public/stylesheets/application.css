@@ -1,0 +1,24 @@
+body {
+  background-color: navy;
+}
+
+p {
+  color: white;
+}
+
+p a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  color: white
+}
+
+.bordered {
+  border: 2px solid black;
+}
+
+.gutter-left {
+  margin-left: 30px;
+}

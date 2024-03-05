@@ -2,7 +2,7 @@
 <html>
   <head>
     <%# Replace with your application name %>
-    <title>Starter App</title>
+    <title>Chicago Bears Enthusiasts</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,19 +11,29 @@
   </head>
 
   <body>
-    <p>
-      <% @user = User.find_by({ "id" => session["user_id"] }) %>
-      <% if @user == nil %>
-        <a href="/users/new">Sign Up</a> | <a href="/login">Login</a>
-      <% else %>
-        <%= @user["first_name"] %> | <a href="/logout">Logout</a>
-      <% end %>
-    </p>
+    <div class="gutter-left">
+      <p>
+        <% @user = User.find_by({ "id" => session["user_id"] }) %>
+        <% if @user == nil %>
+          <a href="/users/new">Sign Up</a> | <a href="/login">Login</a>
+        <% else %>
+          <%= @user["first_name"] %> | <a href="/logout">Logout</a>
+        <% end %>
+      </p>
 
-    <p>
-      <%= flash["notice"] %>
-    </p>
+        <div>
+        
+    <h1>Chicago Bears Enthusiasts</h1>
+    <div>
+      <a href="/posts/new/">New Post</a>
+    </div>
+  </div>
 
-    <%= yield %>
+      <p>
+        <%= flash["notice"] %>
+      </p>
+
+      <%= yield %>\
+    </div>
   </body>
 </html>
